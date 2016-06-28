@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="AutoLoadMore.widget.AutoLoadMore" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>AutoLoadMore</name>
+    <description>Place below a listview to automatically load more content when reaching the bottom of the page.</description>
+
+    <icon />
+
+    <properties>
+        <property key="interval" type="integer" required="true" defaultValue="250">
+            <caption>Interval</caption>
+            <category>Behavior</category>
+            <description>Check whether the "load more" button needs to be clicked each X millseconds. Default 250ms.</description>
+        </property>
+        <property key="factor" type="string" required="true" defaultValue="1.5">
+            <caption>Preload Factor</caption>
+            <category>Behavior</category>
+            <description>A factor to adjust how early content is loaded. A value of 1 means the load more button is clicked when first visible. 1.5 means it starts half a screen height earlier. 2 means it loads one full screen height early.</description>
+        </property>
+    </properties>
+</widget>
+
