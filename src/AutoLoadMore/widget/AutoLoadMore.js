@@ -1,4 +1,5 @@
 /*global logger,define,require,dojo*/
+/*jslint nomen: true*/
 /*
     AutoLoadMore
     ========================
