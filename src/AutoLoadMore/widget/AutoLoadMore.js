@@ -8,7 +8,7 @@
     @version   : 1.0
     @author    : Eric Tieniber
     @date      : Mon, 27 Jun 2016 22:18:59 GMT
-    @copyright : 
+    @copyright :
     @license   : MIT
 
     Documentation
@@ -30,14 +30,14 @@ define([
         // Parameters configured in the Modeler.
         interval: 250,
         factor: 1.5,
-		
+
 		//private variables
 		runningInterval: null,
 
         // dijit._WidgetBase.postCreate is called after constructing the widget. Implement to do extra setup work.
         postCreate: function () {
             logger.debug(this.id + ".postCreate");
-			
+
 			var interval = this.interval,
 				factor = this.factor,
 				thisObj = this,
@@ -53,7 +53,7 @@ define([
 			this.runningInterval = setInterval(function () {
 				var listview = thisObj.domNode.previousSibling,
 					loadmoreButton = (listview.lastElementChild || listview.lastChild),
-					isButton = dojo.hasClass(loadmoreButton, "mx-listview-loadMore");
+					isButton = loadmoreButton && dojo.hasClass(loadmoreButton, "mx-listview-loadMore");
 				if (isButton && isElementInViewport(loadmoreButton, factor)) {
 					loadmoreButton.click();
 				}
