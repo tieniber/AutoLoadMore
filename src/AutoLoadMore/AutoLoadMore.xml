@@ -16,6 +16,11 @@
             <category>Behavior</category>
             <description>A factor to adjust how early content is loaded. A value of 1 means the load more button is clicked when first visible. 1.5 means it starts half a screen height earlier. 2 means it loads one full screen height early.</description>
         </property>
+        <property key="listViewName" type="string" required="false">
+            <caption>ListView Name</caption>
+            <category>Behavior</category>
+            <description>Name of the ListView that you want to load more items for.</description>
+        </property>
     </properties>
 </widget>
 
